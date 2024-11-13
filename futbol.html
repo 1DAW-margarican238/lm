@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fútbol</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: linear-gradient(to right, red 50%, green 50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #282828;
+            color: white;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .tabla {
+            width: 50%;
+            border-collapse: collapse;
+           margin: 25px;
+        }
+
+        .sevilla-bg {
+            background-color: #B20000;
+            float: right;
+        }
+
+        .betis-bg {
+            background-color: #009F45;
+            float: left;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        td {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        td img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+        }
+
+        .escudo {
+            width: 100px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EQUIPOS DE SEVILLA</h1>
+    </header>
+    
+    <div class="container clearfix">
+        <table class="tabla sevilla-bg">
+            <thead>
+                <tr>
+                    <th colspan="4">Sevilla F.C.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="sevilla/Adrià Pedrosa.jpg" alt="Adrià Pedrosa"><p>Pedrosa</p></td>
+                    <td><img src="sevilla/Chidera Ejuke.png" alt="Chidera Ejuke"><p>Ejuke</p></td>
+                    <td><img src="sevilla/Dodi Lukebakio.png" alt="Dodi Lukebakio"><p>Lukebakio</p></td>
+                    <td><img src="sevilla/Isaac Romero.jpg" alt="Isaac Romero"><p>Romero</p></td>
+                </tr>
+                <tr>
+                    <td><img src="sevilla/José Ángel Carmona.jpg" alt="José Ángel Carmona"><p>Carmona</p></td>
+                    <td><img src="sevilla/Loïc Badé.png" alt="Loïc Badé"><p>Badé</p></td>
+                    <td><img src="sevilla/Lucien Agoume.png" alt="Lucien Agoumé"><p>Agoumé</p></td>
+                    <td><img src="sevilla/Marcão.jpg" alt="Marcão"><p>Marcão</p></td>
+                </tr>
+                <tr>
+                    <td><img src="sevilla/salas.jpg" alt="salas"><p>Salas</p></td>
+                    <td><img src="sevilla/nyland.png" alt="Órjan Nyland"><p>Nyland</p></td>
+                    <td><img src="sevilla/ferllo.png" alt="ferllo"><p>Ferllo</p></td>
+                    <td><img src="sevilla/Navas.png" alt="Navas"><p>Navas</p></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; padding: 10px;">
+                        <a href="https://sevillafc.es/"><img src="sevilla/sevilla.png" alt="Escudo Sevilla" class="escudo"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="tabla betis-bg">
+            <thead>
+                <tr>
+                    <th colspan="4">Real Betis Balompié</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="betis/Abde Ezzalzouli.jpg" alt="Abde Ezzalzouli"><p>Abde</p></td>
+                    <td><img src="betis/Diego Javier Llorente.jpg" alt="Diego Javier Llorente"><p>Llorente</p></td>
+                    <td><img src="betis/Giovani Lo Celso.jpg" alt="Giovani Lo Celso"><p>Lo Celso</p></td>
+                    <td><img src="betis/Héctor Bellerín.jpg" alt="Héctor Bellerín"><p>Bellerín</p></td>
+                </tr>
+                <tr>
+                    <td><img src="betis/Johnny Cardoso.jpg" alt="Johnny Cardoso"><p>Cardoso</p></td>
+                    <td><img src="betis/Marc Bartra.jpg" alt="Marc Bartra"><p>Bartra</p></td>
+                    <td><img src="betis/Perraud.jpg" alt="Perraud"><p>Perraud</p></td>
+                    <td><img src="betis/Pablo Fornals.jpg" alt="Pablo Fornals"><p>Fornals</p></td>
+                </tr>
+                <tr>
+                    <td><img src="betis/Ricardo Rodriguez.jpg" alt="Ricardo Rodriguez"><p>Rodriguez</p></td>
+                    <td><img src="betis/Rui Silva.jpg" alt="Rui Silva"><p>Silva</p></td>
+                    <td><img src="betis/Adrián.jpg" alt="Adrián"><p>Adrián</p></td>
+                    <td><img src="betis/Natan.jpg" alt="Natan"><p>Natan</p></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; padding: 10px;">
+                        <a href="https://www.realbetisbalompie.es/"><img src="betis/betis.png" alt="Escudo Betis" class="escudo"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Trabajo realizado por Margarita C</p>
+    </footer>
+
+</body>
+</html>
