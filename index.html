@@ -9,7 +9,11 @@
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		background-color: cadetblue; 
+		background-color: cadetblue;
+    position: fixed;  
+    top: 0;           
+    width: 100%;     
+    z-index: 1000;    
 	}
 
 		#horizontal li {
@@ -39,6 +43,12 @@
   background-color: darkgreen;
   /* el color de fondo*/
   overflow: hidden;
+  position: fixed; 
+    top: 50px;        
+    left: 0;         
+    height: 100%;     
+    z-index: 1000;    
+    padding-top: 20px;
 	}
 
 	.vertical li a {
@@ -59,7 +69,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body >
+<body>
+  
+<nav >
 	<ol id="horizontal">
         <li><a href="1tamaños.html">Tamaños</a></li>
         <li><a href="2listas.html">Listas</a></li>
@@ -87,9 +99,17 @@
 	<li><a href="futbol.html">Futbol</a></li>
 	<li><a href="margarita-css3.html">Propiedades css3</a></li>	
     </ol>
-	
-	
-</body>
-</html>
+  </nav>
+  <div align="center">
+    <h1><b>LENGUAJE DE MARCAS Y SISTEMAS DE GESTIÓN DE INFORMACIÓN</b></h1>
+  <br></br>
+  <p>Margarita Cantero Durán</p>
+  <br></br>
+  <img src="imagenes/fotomia.jpg" width="138" height="168">
+  <hr></hr>
+  <h3><b> IES MARTÍNEZ MONTAÑÉS</b></h3>
+  <p>Curso 2024-2025</p>
+  <img src="imagenes/logo.png" width="180" height="180">
+  </div>
 </body>
 </html>
