@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario CV</title>
+<!-- para q se vea la foto (buscado en internet) -->
+    <script>
+        function mostrarImagen(event) {
+            const preview = document.getElementById('preview');
+            preview.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+    <style>
+        a{
+            background-color: white;
+           color: black;
+            width: 60%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px;
+        }
+        .enfoca:visited  {color:darkgoldenrod; font-weight:normal; font-size:18px; text-decoration:none;
+            font-family:verdana,arial,helvetica,sans-serif;}
+            .transic:hover{
+                background-color:burlywood;
+                transition: 2s;
+
+            }
+            .tranf{
+                transform: skew(20deg);
+            }
+           
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <h2 style="text-align: center;">Formulario CV</h2>
+    <p align="center">Rellene los siguientes campos para cumplimentar su CV</p>
+ 
+    <form action="mailto:mcandur2504@g.educaand.es" method="post" enctype="text/plain">
+        <table border="0" cellpadding="10" cellspacing="5" style="width: 85%; margin: auto; border-collapse: collapse; background-color: white;">
+            <tr> 
+                <td style="background-color: DarkCyan; color: white; width: 50%; vertical-align: top;">
+<!-- dat. personales -->
+               
+   <h3 style="background-color: Darkslategray; color: white; padding: 10px; text-align: left;">DATOS PERSONALES</h3>
+   <div style="background-color:#0b6464; padding: 10px;">                   
+   <input type="file" name="foto" accept="image/*" onchange="mostrarImagen(event)" required><br>
+                    <img id="preview" alt="Vista previa de la imagen" style="margin-top: 10px; width: 100px; height: 100px; border: 1px ; object-fit: cover; display: block; margin: auto;">
+<br></br>
+
+<input type="text" name="nombre" maxlength="30" required style="width: 60%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Nombre"><br>
+                    <input type="text" name="apellidos" maxlength="30" required style="width: 60%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Apellidos"><br>
+                    <input type="text" name="direccion" maxlength="50" required style="width: 20%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Calle">
+                    <input type="text" name="direccion" maxlength="50" required style="width: 17.8%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Nº">
+                    <input type="text" name="direccion" maxlength="50" required style="width: 18%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Piso">
+                    <br>
+                    <input type="text" name="direccion" maxlength="50" required style="width: 20%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Letra">
+                    <input type="text" name="direccion" maxlength="50" required style="width: 17.8%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="CP">
+                    <input type="text" name="direccion" maxlength="50" required style="width: 18%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Provincia">
+                    <br>
+                    <input type="tel" name="telefono" maxlength="15" required style="width: 60%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Teléfono"><br>
+<input type="email" name="correo" required style="width: 60%; padding: 6px; margin-bottom: 10px; border-radius: 4px; border: 1px ;" placeholder="Correo"><br>
+<a class="enfoca" href="https://1daw-margarican238.github.io/lm/">Pagina del Hosting</a>
+</div>   
+<!-- idiomah3 -->
+<h3 style="background-color: Darkslategray; color: white; padding: 10px; text-align: left;">IDIOMAS</h3>
+<div style="background-color:#0e7d7d; padding: 10px;">  
+                    <!-- idioma -->
+<p>
+<input type="checkbox" id="Inglés" name="Inglés">
+<label for="Inglés">Inglés</label><br/>
+<select name="ingles_hablado">
+                            <option>Hablado: Bajo</option>
+                            <option>Hablado: Medio</option>
+                            <option>Hablado: Alto</option>
+                        </select>
+                        <select name="ingles_escrito">
+                            <option>Escrito: Bajo</option>
+                            <option>Escrito: Medio</option>
+                            <option>Escrito: Alto</option>
+                        </select>
+                    </p>
+<!-- idioma -->
+                    <p>
+                        <input type="checkbox" id="Francés" name="Francés">
+<label for="Francés">Francés</label><br/>
+<select name="frances_hablado">
+                            <option>Hablado: Bajo</option>
+                            <option>Hablado: Medio</option>
+                            <option>Hablado: Alto</option>
+                        </select>
+                        <select name="frances_escrito">
+                            <option>Escrito: Bajo</option>
+                            <option>Escrito: Medio</option>
+                            <option>Escrito: Alto</option>
+                        </select>
+                    </p>
+<!-- idioma -->
+                    <p>
+                        <input type="checkbox" id="Alemán" name="Alemán">
+<label for="Alemán">Alemán</label><br/>
+<select name="aleman_hablado">
+                            <option>Hablado: Bajo</option>
+                            <option>Hablado: Medio</option>
+                            <option>Hablado: Alto</option>
+                        </select>
+                        <select name="aleman_escrito">
+                            <option>Escrito: Bajo</option>
+                            <option>Escrito: Medio</option>
+                            <option>Escrito: Alto</option>
+                        </select>
+                    </p>
+<!-- idioma -->
+                    <p>
+                        <input type="checkbox" id="Otro" name="Otro">
+<label for="Otro">Otro   </label><input type="text" name="otro_idioma" placeholder="Especificar" style="width: 100px;">
+                       <br>
+   <select name="otro_hablado">
+                            <option>Hablado: Bajo</option>
+                            <option>Hablado: Medio</option>
+                            <option>Hablado: Alto</option>
+                        </select>
+                        <select name="otro_escrito">
+                            <option>Escrito: Bajo</option>
+                            <option>Escrito: Medio</option>
+                            <option>Escrito: Alto</option>
+                        </select>
+                    </p>
+                </td>
+            </div>
+ 
+                <!--Columna2 dat. academicos/exp.prof/apt.pers/-->
+                <td style="background-color: Bisque; width: 50%; vertical-align: top;">
+                    <h3 style="background-color: Darkslategray; color: white; padding: 10px; text-align: left;">DATOS ACADÉMICOS</h3>
+                    <div style="background-color:#f0b979; padding: 10px;">  
+                    <p>
+                        <input type="checkbox" name="ESO"> ESO<br/>
+                        <input type="checkbox" name="BACHILLERATO"> BACHILLERATO<br/>
+                        <input type="checkbox" name="CFGM"> CFGM<br/>
+                        <input type="checkbox" name="CFGS"> CFGS<br/>
+                        <input type="checkbox" name="universidad"> EDUCACIÓN UNIVERSITARIA<br/>
+                        <input type="checkbox" name="master"> MASTER POSTGRADO<br/>
+                    </p>
+                    </div>
+ 
+                    <h3 style="background-color: Darkslategray; color: white; padding: 10px; text-align: left;">EXPERIENCIA PROFESIONAL</h3>
+                    <!--exp.prof, seleccion en lista-->
+                    <div style="background-color:#fad6a5; padding: 10px;">
+<p> Sector Laboral </p>
+                    <select 
+                    class="transic"
+                    name="sector" required style="width: 60%; padding: 6px; border-radius: 4px; border: 1px ; margin-bottom: 10px;">
+<option >Comercial</option>
+                        <option >Informática</option>
+                        <option>Salud</option>
+                        <option>Educación</option>
+                        <option>Mecánica</option>
+                    </select>
+<br></br>
+                    <textarea name="experiencia" rows="3" required style="width: 90%; padding: 6px; border-radius: 4px; border: 1px ;" placeholder="Describe tu experiencia"></textarea><br>
+ </div>
+                    <h3 style="background-color: Darkslategray; color: white; padding: 10px; text-align: left;">APTITUDES PERSONALES</h3>
+                    <div style="background-color:#f5deb3; padding: 10px;">
+                    <textarea name="aptitudes" rows="6" required style="width: 90%; padding: 6px; border-radius: 4px; border: 1px ;" placeholder="Describe tus aptitudes personales"></textarea><br>
+                </td>
+            </tr>
+        </div>
+ 
+            <!-- botones -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input class="tranf" type="submit" value="Enviar" style="width: 40%; padding: 10px; margin: 15px 10px; background-color: DarkCyan; color: white; border: 0px; border-radius: 5px; cursor: pointer;">
+                    <input class="tranf" type="reset" value="Borrar" style="width: 40%; padding: 10px; margin: 15px 10px; background-color: DarkCyan; color: white; border: 0px; border-radius: 5px; cursor: pointer;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
