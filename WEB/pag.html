@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web en Construcción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .mensaje {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            animation: aparecer 1.5s ease-out;
+        }
+
+        .subtitulo {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+
+
+        .boton {
+            margin-top: 30px;
+            background-color: #a30000; 
+            color: white;
+            padding: 15px 32px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #5e0101; 
+        }
+
+    
+        @keyframes aparecer {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="mensaje">
+        Web en Construcción
+    </div>
+    <div class="subtitulo">
+        ¡Pronto tendremos más contenido disponible!
+    </div>
+    <div class="imagen"></div>
+
+    <!-- Botón para volver a la página de inicio (el index)-->
+    <a href="index.html" class="boton">Volver al inicio</a>
+
+</body>
+</html>

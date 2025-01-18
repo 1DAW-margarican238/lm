@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cádiz</title>
+    <style>
+       
+       body {
+    background-color: #87CEEB;
+    color: #1E3A5F;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.fondo1 {
+  height: 100px;
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), 
+    url('imagenes/cadiz/fondocadiz.jpg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fondo1 h1 {
+  font-size: 4em;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 4);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #ffb800;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+    width: 150px;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 10px;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul li:first-child ul li:first-child > a {
+    font-weight: bold;
+}
+nav ul li:first-child ul li:nth-child(2) > a {
+    font-style: italic;
+}
+.infobloque {
+    width: 100%;
+    height: 100vh;
+     
+    text-align: center;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #87CEEB;
+}
+
+.historia .iframe-container {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia .iframe-container iframe {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.historia .texto {
+    width: 40%;
+    margin: auto;
+    padding: auto;
+    text-align: justify;
+}
+
+
+
+h2 {
+    font-size: 47px;
+    color: #073447;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #1E3A5F;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+
+.elementos {
+   align-items: center;
+   text-align: center;
+    background-color:#FFFFFF;
+}
+
+
+.bloques {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    gap: 40px;
+}
+
+.bloque {
+    background-color: #87CEEB;
+    border-radius: 10px;
+    width: 400px;
+    height: 220px;
+    overflow: hidden;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 10);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bloque:hover {
+    transform: scale(1.1);
+}
+
+
+.bloque h3 {
+    margin: 30px;
+    font-size: 1.5rem;
+    color: #1E3A5F;
+}
+
+.bloque p {
+padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+}
+
+table td {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.actividad .imagen-izquierda,
+.actividad .imagen-derecha {
+    width: 50%;         
+    height: 50vh;        
+}
+
+.actividad .imagen-izquierda img,
+.actividad .imagen-derecha img {
+    width: 100%;          
+    height: 100%;        
+    object-fit: cover;   
+    border-radius: 0;     
+    margin: 0;            
+    padding: 0;          
+}
+
+.actividad .texto-derecha,
+.actividad .texto-izquierda {
+    width: 40%;         
+    padding: 30px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+        footer {
+    background-color: #111111;
+   
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb800;
+}
+footer p{
+     color: #FFFFFF;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="fondo1">
+        <h1>CÁDIZ/JERÉZ</h1>
+    </header>
+    <nav id="general">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="propiedades.html">Propiedades externas usadas</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="pag.html">Granada</a></li>
+            <li><a href="pag.html">Almería</a></li>
+            <li><a href="pag.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <section class="infobloque historia">
+        <div class="texto">
+            <h2>Historia de la Feria de Cádiz (Jeréz)</h2>
+            <p>La Feria de Cádiz tiene sus raíces en el siglo XVIII, celebrándose inicialmente en honor a la Virgen del Rosario, patrona de la ciudad. Con el tiempo, la feria se transformó en un evento de carácter popular y festivo, consolidándose en el siglo XIX cuando las primeras casetas se instalaron en la Plaza de las Flores. A día de hoy, la feria se celebra a finales de junio o principios de julio, marcando el inicio del verano con el calor característico de la ciudad. La fiesta se desarrolla principalmente en el Parque Genovés y alrededores, donde las casetas se llenan de música, baile y gastronomía local. La "chirigota", expresión musical y humorística de la ciudad, es uno de los grandes atractivos, mientras que el pescaíto frito, las tortillitas de camarones y el paseo en barca por la bahía son imprescindibles en la feria gaditana. Este evento es una celebración vibrante, donde la alegría y el color son los protagonistas, atrayendo cada año a miles de turistas a disfrutar del espíritu único de Cádiz.</p>
+
+        </div>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="videos/cadiz.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+    </section>
+    
+
+    <section class="infobloque elementos">
+        <h2 style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); padding-top: 45px;">Elementos Únicos de la Feria de Cádiz</h2>
+
+        <div class="bloques">
+            <!-- Feria de Cádiz -->
+<div class="bloque">
+    <h3>El "Pescao" y la "Torta de Acelga" (Cádiz)</h3>
+    <p>El pescaíto frito y la torta de acelga son clásicos de la feria, acompañados de manzanilla en todos los puestos.</p>
+</div>
+<div class="bloque">
+    <h3>Las Carpas y la Música de la Bahía (Cádiz)</h3>
+    <p>Las carpas ofrecen música en vivo, especialmente de la "bahía", creando un ambiente festivo y alegre.</p>
+</div>
+<div class="bloque">
+    <h3>Los Disfraces de Carnaval (Cádiz)</h3>
+    <p>La influencia del carnaval se nota en la feria, con disfraces y máscaras que aportan color y diversión.</p>
+</div>
+</div>
+
+<div class="bloques">
+    <!-- Feria de Jerez (Jerez) -->
+    <div class="bloque">
+        <h3>El Vino de Jerez y el "Rebujito" (Jerez)</h3>
+        <p>El "rebujito" y el vino de Jerez son imprescindibles para disfrutar de la feria, especialmente en las casetas.</p>
+    </div>
+    <div class="bloque">
+        <h3>El "Paso del Caballo" (Jerez)</h3>
+        <p>El desfile de caballos y jinetes ataviados tradicionalmente es uno de los momentos más destacados de la feria.</p>
+    </div>
+    <div class="bloque">
+        <h3>Las "Banderas" y la Tradición Ecuestre (Jerez)</h3>
+        <p>Las banderas de las peñas y la tradición ecuestre de Jerez son un símbolo distintivo de la feria.</p>
+    </div>
+</div>
+
+        
+    </section>
+
+
+    <section class="actividad">
+        <table>
+            <tr>
+                <td class="imagen-izquierda">
+                    <img src="imagenes/cadiz/imagen-izq.webp" alt="Imagen Izquierda">
+                </td>
+                <td class="texto-derecha">
+                    <p>La Feria de Jerez es un evento vibrante lleno de tradiciones ecuestres, música flamenca y, por supuesto, vinos y rebujitos. Uno de los momentos más destacados es el "Paso del Caballo", un desfile donde los jinetes lucen sus caballos de pura raza, mostrando una destreza impresionante. Además, las casetas se llenan de alegría con el toque inconfundible del flamenco, creando una atmósfera única. Los más pequeños también disfrutan de la feria en el Espacio Infantil, con actividades adaptadas especialmente para ellos, lo que convierte este evento en una fiesta familiar para todos.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="texto-izquierda">
+                    <p>Otro de los momentos más esperados es el "Rebujito", la bebida tradicional de la feria, combinada con tapas típicas y el buen vino de Jerez. Las "Banderas" de las peñas, que adornan la feria, son símbolos de la tradición jerezana, y las competiciones ecuestres, como el Concurso de Enganches, muestran la importancia de la equitación en la ciudad. Y al final de cada jornada, los Fuegos Artificiales iluminan el cielo jerezano, poniendo el broche final a una fiesta llena de color y emoción.</p>
+                </td>
+                <td class="imagen-derecha">
+                    <img src="imagenes/cadiz/imagen-der.jpg" alt="Imagen Derecha">
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+
+    <footer>
+        <p> Margarita Cantero Durán | Lenguaje de Marcas</p>
+        <a href="#">Volver arriba</a>
+    </footer>
+</body>
+</html>

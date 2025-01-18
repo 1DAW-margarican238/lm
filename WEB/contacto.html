@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111111;
+            padding: 10px;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 5px;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            transition: color 0.5s;
+        }
+
+        nav a:hover {
+            color: #ffb800;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul ul li {
+            width: 150px;
+        }
+
+        nav ul ul a {
+            display: block;
+            padding: 10px;
+        }
+
+        nav li:hover > ul {
+            display: block;
+        }
+
+        nav ul li:first-child ul li:first-child > a {
+    font-weight: bold;
+}
+nav ul li:first-child ul li:nth-child(2) > a {
+    font-style: italic;
+}
+        .form-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5);
+            margin-top: 100px;
+        }
+
+        h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffb800;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffb800;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </li>
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="granada.html">Granada</a></li>
+            <li><a href="almeria.html">Almería</a></li>
+            <li><a href="jaen.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <!-- Formulario -->
+    <div class="form-container">
+        <h2>Formulario de Contacto</h2>
+        <form action="mailto:micorreo@eseste.es" method="POST" enctype="text/plain">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="tel" placeholder="Teléfono" required 
+                    oninput="this.value.length < 9 ? this.style.borderColor = 'red' : this.style.borderColor = 'green'">
+            <select required>
+                <option>Selecciona una opción</option>
+                <option>Información sobre la feria</option>
+                <option>Colaboración de información</option>
+                <option>Problemas técnicos</option>
+                <option>Otros</option>
+            </select>
+            <textarea placeholder="Comentarios" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Margarita Cantero Durán | Lenguaje de Marcas</p>
+    </footer>
+</body>
+</html>

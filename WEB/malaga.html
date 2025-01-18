@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Málaga</title>
+    <style>
+       
+       body {
+    background-color: #005377;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.fondo1 {
+  height: 100px;
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), 
+    url('imagenes/malaga/fondomalaga.png') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fondo1 h1 {
+  font-size: 4em;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 4);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #ffb800;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+    width: 150px;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 10px;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul li:first-child ul li:first-child > a {
+    font-weight: bold;
+}
+nav ul li:first-child ul li:nth-child(2) > a {
+    font-style: italic;
+}
+.infobloque {
+    width: 100%;
+    height: 100vh;
+     
+    text-align: center;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #005377;
+}
+
+.historia .iframe-container {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia .iframe-container iframe {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.historia .texto {
+    width: 40%;
+    margin: auto;
+    padding: auto;
+    text-align: justify;
+}
+
+
+
+h2 {
+    font-size: 47px;
+    color: #073447;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #FFFAF0;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+
+.elementos {
+   align-items: center;
+   text-align: center;
+    background-color:#F4EBD9;
+}
+
+
+.bloques {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    gap: 40px;
+}
+
+.bloque {
+    background-color: #073447;
+    border-radius: 10px;
+    width: 400px;
+    height: 220px;
+    overflow: hidden;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 10);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bloque:hover {
+    transform: scale(1.1);
+}
+
+
+
+.bloque h3 {
+    margin: 30px;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.bloque p {
+padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+     
+table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+}
+
+table td {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.actividad .imagen-izquierda,
+.actividad .imagen-derecha {
+    width: 50%;         
+    height: 50vh;        
+}
+
+.actividad .imagen-izquierda img,
+.actividad .imagen-derecha img {
+    width: 100%;          
+    height: 100%;        
+    object-fit: cover;   
+    border-radius: 0;     
+    margin: 0;            
+    padding: 0;          
+}
+
+.actividad .texto-derecha,
+.actividad .texto-izquierda {
+    width: 40%;         
+    padding: 30px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+
+
+        footer {
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb800;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="fondo1">
+        <h1>MALAGA</h1>
+    </header>
+    <nav id="general">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="propiedades.html">Propiedades externas usadas</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="pag.html">Granada</a></li>
+            <li><a href="pag.html">Almería</a></li>
+            <li><a href="pag.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <section class="infobloque historia">
+        <div class="texto">
+            <h2>Historia de la Feria de Málaga</h2>
+            <p>La Feria de Málaga tiene su origen en 1487, cuando la ciudad fue recuperada por los Reyes Católicos tras la conquista de la ciudad. Se celebró por primera vez como una festividad religiosa y de acción de gracias por la reconquista, con una serie de actos religiosos y festivos en honor a la Virgen de la Victoria, patrona de la ciudad. Con el tiempo, la feria fue evolucionando, y a finales del siglo XIX comenzó a adquirir un carácter más festivo y popular. En sus primeras ediciones, la feria se celebraba en la Plaza de la Constitución, pero a medida que la ciudad crecía, la festividad se expandió a otras zonas, consolidándose como uno de los eventos más importantes de Málaga. Hoy en día, la Feria de Málaga se celebra a mediados de agosto, marcando el punto culminante de las fiestas veraniegas en la ciudad. La feria es conocida por su ambiente alegre y festivo, con música, bailes, y especialmente el rebujito, un cóctel tradicional de la zona. Las casetas, el flamenco y los desfiles de carrozas, junto con las tradicionales ferias de día y de noche, son los principales atractivos de este evento, que atrae a miles de malagueños y turistas cada año. La Feria de Málaga es un escaparate de la cultura andaluza, donde la música y la gastronomía juegan un papel crucial, y donde se celebra con entusiasmo la historia y las tradiciones de la ciudad.</p>
+        </div>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iFYZdpttnWE?si=78fWAnaPfw5x1dnF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </section>
+    
+
+    <section class="infobloque elementos">
+        <h2 style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); padding-top: 45px;">Elementos Únicos de la Feria de Málaga</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <h3>La Portada</h3>
+                <p>Una de las entradas más emblemáticas, decorada con miles de bombillas, que marca el inicio de la feria.</p>
+            </div>
+            <div class="bloque">
+                <h3>El Espeto de Sardinas</h3>
+                <p>El pescado a la brasa, especialmente las sardinas, es uno de los platos más característicos de la feria.</p>
+            </div>
+            <div class="bloque">
+                <h3>La Feria de Día</h3>
+                <p>En el centro de la ciudad, la fiesta se traslada a las terrazas y bares, con música, baile y diversión.</p>
+            </div>
+        </div>
+        
+        <div class="bloques">
+            <div class="bloque">
+                <h3>La Calle Larios</h3>
+                <p>La famosa calle de Málaga, iluminada de manera espectacular, es el centro de la celebración.</p>
+            </div>
+            <div class="bloque">
+                <h3>La Música Malagueña</h3>
+                <p>Las bandas de música y las rumbas suenan por toda la feria, creando un ambiente festivo único.</p>
+            </div>
+            <div class="bloque">
+                <h3>Las Tronas</h3>
+                <p>Unos tradicionales asientos elevados que se colocan en las casetas para disfrutar mejor de las vistas y el ambiente.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="actividad">
+        <table>
+            <tr>
+                <td class="imagen-izquierda">
+                    <img src="imagenes/malaga/imagen-izq.webp" alt="Imagen Izquierda">
+                </td>
+                <td class="texto-derecha">
+                    <p>La Feria de Málaga, celebrada cada agosto, es uno de los eventos más emblemáticos de la ciudad, ofreciendo actividades que combinan la tradición andaluza con la diversión para todas las edades. Entre las actividades más destacadas se encuentra la Muestra de Caballos y Carruajes, donde los jinetes, con sus elegantes trajes, recorren el centro de Málaga a bordo de caballos engalanados, creando un espectáculo de color y elegancia. El Alumbrado de la Feria es otro de los grandes momentos, cuando el centro histórico de la ciudad se ilumina con miles de luces, marcando el inicio de las festividades con una atmósfera única. Además, la Feria Infantil ofrece un espacio lleno de atracciones y juegos para los más pequeños, garantizando su disfrute en un ambiente seguro y festivo.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="texto-izquierda">
+                    <p>Uno de los momentos más esperados por los malagueños es la Cruz de los Molletes, una tradición que consiste en una representación en la que se preparan molletes (panecillos típicos malagueños) con aceite de oliva y jamón, una delicia que se comparte entre amigos y familiares. También, la Procesión del Patrón recorre las principales calles de la ciudad, con la imagen de la Virgen de la Victoria, la patrona de Málaga, siendo portada por los malagueños con devoción y entusiasmo. Para cerrar cada jornada, los Fuegos Artificiales sobre el puerto de Málaga deslumbran el cielo nocturno, un espectáculo que deja una huella imborrable en todos los asistentes, cerrando con broche de oro la fiesta.
+
+                    </p>
+                </td>
+                <td class="imagen-derecha">
+                    <img src="imagenes/malaga/imagen-der.jpg" alt="Imagen Derecha">
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p> Margarita Cantero Durán | Lenguaje de Marcas</p>
+        <a href="#">Volver arriba</a>
+    </footer>
+</body>
+</html>

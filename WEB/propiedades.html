@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación del Código</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #FFD700;
+        }
+
+        .section {
+            background-color: #1a1a1a;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111111;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 5px;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            transition: color 0.5s;
+        }
+
+        nav a:hover {
+            color: #ffb800;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul ul li {
+            width: 150px;
+        }
+
+        nav ul ul a {
+            display: block;
+            padding: 10px;
+        }
+
+        nav li:hover > ul {
+            display: block;
+        }
+
+        nav ul li:first-child ul li:first-child > a {
+            font-weight: bold;
+        }
+
+        nav ul li:first-child ul li:nth-child(2) > a {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="general">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="propiedades.html">Propiedades externas usadas</a></li>
+                </ul>
+            </li>
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="pag.html">Granada</a></li>
+            <li><a href="pag.html">Almería</a></li>
+            <li><a href="pag.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <h1>Explicación de las propiedades usadas externas</h1>
+
+    <div class="section">
+        <h2>1. height: 100vh - Pantalla completa</h2>
+        <p>La propiedad "height: 100vh" hace que el elemento ocupe toda la altura de la ventana del navegador. "vh" es una unidad de medida relativa al 1% de la altura de la ventana.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. center/cover - Imagen de fondo</h2>
+        <p>Usamos la propiedad background con center/cover para asegurar que la imagen de fondo se muestre centrada y cubra todo el contenedor sin distorsionarse.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Explicación del Script - Slideshow</h2>
+        <p>Este es el script para un carrusel de imágenes. Definimos un array llamado slideIndexes para llevar un seguimiento del índice actual de las imágenes en cada grupo de slides. Hay una función plusDivs que se encarga de aumentar o disminuir el índice de la imagen mostrada cuando se hace clic en los botones del carrusel. La función showDivs se usa para mostrar o esconder las imágenes dependiendo de su índice. El script también inicializa el carrusel mostrando la primera imagen al cargar la página.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. <audio> - Agregar audio</h2>
+        <p>Se pueden agregar archivos de audio con la etiqueta &lt;audio&gt;. Esto permite reproducir sonidos en la página. Se puede incluir la opción controls para permitir que el usuario controle la reproducción.</p>
+    </div>
+
+</body>
+</html>

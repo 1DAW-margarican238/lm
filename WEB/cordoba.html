@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Córdoba</title>
+    <style>
+       
+       body {
+    background-color: #556B2F;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.fondo1 {
+  height: 100px;
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), 
+    url('imagenes/cordoba/fondocordoba.jpg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fondo1 h1 {
+  font-size: 4em;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 4);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #ffb800;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+    width: 150px;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 10px;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul li:first-child ul li:first-child > a {
+    font-weight: bold;
+}
+nav ul li:first-child ul li:nth-child(2) > a {
+    font-style: italic;
+}
+.infobloque {
+    width: 100%;
+    height: 100vh;
+     
+    text-align: center;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #556B2F;
+}
+
+.historia .iframe-container {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia .iframe-container iframe {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.historia .texto {
+    width: 40%;
+    margin: auto;
+    padding: auto;
+    text-align: justify;
+}
+
+
+
+h2 {
+    font-size: 47px;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #222222;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+
+.elementos {
+   align-items: center;
+   text-align: center;
+    background-color:#FFF9E3;
+}
+
+
+.bloques {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    gap: 40px;
+}
+
+.bloque {
+    background-color: #556B2F;
+    border-radius: 10px;
+    width: 400px;
+    height: 220px;
+    overflow: hidden;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 10);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bloque:hover {
+    transform: scale(1.1);
+}
+
+
+
+.bloque h3 {
+    margin: 30px;
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+.bloque p {
+padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+}
+
+table td {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.actividad .imagen-izquierda,
+.actividad .imagen-derecha {
+    width: 50%;         
+    height: 50vh;        
+}
+
+.actividad .imagen-izquierda img,
+.actividad .imagen-derecha img {
+    width: 100%;          
+    height: 100%;        
+    object-fit: cover;   
+    border-radius: 0;     
+    margin: 0;            
+    padding: 0;          
+}
+
+.actividad .texto-derecha,
+.actividad .texto-izquierda {
+    width: 40%;         
+    padding: 30px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+        footer {
+    background-color: #111111;
+   
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb800;
+}
+footer p{
+     color: #FFFFFF;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="fondo1">
+        <h1>CÓRDOBA</h1>
+    </header>
+    <nav id="general">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="propiedades.html">Propiedades externas usadas</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="pag.html">Granada</a></li>
+            <li><a href="pag.html">Almería</a></li>
+            <li><a href="pag.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <section class="infobloque historia">
+        <div class="texto">
+            <h2>Historia de la Feria de Córdoba</h2>
+            <p>La Feria de Córdoba tiene sus raíces en el siglo XVI, cuando comenzó a celebrarse como una fiesta agrícola y ganadera, destinada a promover el comercio y la actividad económica de la ciudad. Su origen está vinculado al evento religioso en honor a la Virgen de la Salud, cuya festividad se celebraba en el mes de mayo. Sin embargo, no fue hasta finales del siglo XIX y principios del siglo XX cuando la feria comenzó a adquirir el formato actual, con un carácter más popular y festivo. Durante estos años, se introdujeron las casetas y los bailes flamencos, convirtiendo la feria en un evento socialmente significativo para la ciudad. Hoy en día, la Feria de Córdoba se celebra a finales de mayo, coincidiendo con el fin de la temporada de patios, lo que añade un toque especial a la festividad. La feria se desarrolla principalmente en el recinto ferial de El Arenal, donde se instalan las famosas casetas, donde se disfrutan de comidas, bebidas y música. Además, los paseos a caballo y en carrozas, las tradicionales sevillanas y la gastronomía local, con platos como el salmorejo y el flamenquín, son algunos de los grandes atractivos de esta festividad. La Feria de Córdoba, que dura una semana, es un escaparate de la rica cultura andaluza, en la que la tradición y la modernidad se combinan para ofrecer un evento único y lleno de colorido, que atrae cada año a miles de visitantes.</p>
+        </div>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="videos/cordoba.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+    </section>
+    
+
+    <section class="infobloque elementos">
+        <h2 style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); padding-top: 45px;">Elementos Únicos de la Feria de Córdoba</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <h3>El Patio de los Naranjos</h3>
+                <p>Un rincón tradicional de la feria, donde se celebra la fiesta y se disfruta de la música y los bailes flamencos.</p>
+            </div>
+            <div class="bloque">
+                <h3>Las Casetas de Feria</h3>
+                <p>Casetas con una mezcla de ambiente tradicional y moderno, donde se vive la alegría de la feria con música y comida.</p>
+            </div>
+            <div class="bloque">
+                <h3>El Concurso de Enganches</h3>
+                <p>El desfile de carruajes y caballos engalanados es uno de los momentos más esperados, destacando la tradición ecuestre de Córdoba.</p>
+            </div>
+        </div>
+        
+        <div class="bloques">
+            <div class="bloque">
+                <h3>Los Trajes Cordobeses</h3>
+                <p>La feria se llena de color con los trajes típicos cordobeses, tanto en hombres como en mujeres, reflejando la tradición andaluza.</p>
+            </div>
+            <div class="bloque">
+                <h3>Las Rejas y Flores</h3>
+                <p>La decoración de las casetas con flores y rejas es uno de los sellos distintivos, creando una atmósfera única en la feria.</p>
+            </div>
+            <div class="bloque">
+                <h3>La Música Flamenca</h3>
+                <p>Las guitarras flamencas y las sevillanas no pueden faltar en la feria, animando cada rincón y creando un ambiente festivo y alegre.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="actividad">
+        <table>
+            <tr>
+                <td class="imagen-izquierda">
+                    <img src="imagenes/cordoba/imagen-izq.jpg" alt="Imagen Izquierda">
+                </td>
+                <td class="texto-derecha">
+                    <p>La Feria de Córdoba, celebrada en mayo, es una de las festividades más importantes de la ciudad, ofreciendo una mezcla perfecta de tradiciones, música y actividades para todos los públicos. Entre las actividades más populares se encuentra el Paseo de Caballos y Carruajes, donde los jinetes lucen sus mejores trajes de corto y los caballos, adornados con flores y cintas, recorren el recinto ferial. El Alumbrado de la Feria es un acontecimiento que marca el inicio de la festividad, cuando las calles del recinto se iluminan con miles de luces, creando un ambiente mágico que da paso a una semana llena de alegría y celebración. Además, la Feria Infantil ofrece una gran variedad de juegos y atracciones pensadas para los más pequeños, garantizando un ambiente de diversión y entretenimiento para toda la familia.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="texto-izquierda">
+                    <p>Uno de los momentos más característicos de la feria es el Tradicional Concurso de Flamenco, que tiene lugar en las casetas del recinto, donde los grupos de flamenco compiten mostrando su arte y pasión por el cante, el baile y la guitarra. Además, no puede faltar la Procesión de la Virgen de la Salud, donde los cordobeses rinden homenaje a su patrona, llevando su imagen por las calles en un ambiente de devoción y emoción. Para finalizar cada jornada, los Fuegos Artificiales iluminan el cielo de Córdoba, ofreciendo un espectáculo visual que pone el broche de oro a la feria, dejando una sensación de magia en el aire.
+                    </p>
+                </td>
+                <td class="imagen-derecha">
+                    <img src="imagenes/cordoba/imagen-der.jpg" alt="Imagen Derecha">
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p> Margarita Cantero Durán | Lenguaje de Marcas</p>
+        <a href="#">Volver arriba</a>
+    </footer>
+</body>
+</html>

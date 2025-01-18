@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huelva</title>
+    <style>
+        body {
+            background-color: #2F4F4F; /* Verde oscuro */
+            color: #F5F5F5; /* Blanco roto */
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+    
+        .fondo1 {
+            height: 100px;
+            background: 
+                radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), 
+                url('imagenes/huelva/fondohuelva.jpg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .fondo1 h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #F5F5F5; /* Blanco roto */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 4);
+        }
+    
+        nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #ffb800;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+    width: 150px;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 10px;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul li:first-child ul li:first-child > a {
+    font-weight: bold;
+}
+nav ul li:first-child ul li:nth-child(2) > a {
+    font-style: italic;
+}
+    
+        .infobloque {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+    
+        .historia {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #2F4F4F; /* Verde oscuro */
+        }
+    
+        .historia .iframe-container {
+            width: 50%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .historia .iframe-container iframe {
+            width: 90%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    
+        .historia .texto {
+            width: 40%;
+            margin: auto;
+            padding: auto;
+            text-align: justify;
+            color: #F5F5F5; /* Blanco roto */
+        }
+    
+        h2 {
+            font-size: 47px;
+            color: #F5F5F5; /* Blanco roto */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        p {
+            font-size: 17px;
+            line-height: 1.5;
+            color: #F5F5F5; /* Blanco roto */
+        }
+    
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+    
+        .elementos {
+            align-items: center;
+            text-align: center;
+            background-color: #cdcbcb; /* Verde oscuro */
+        }
+    
+        .bloques {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+            gap: 40px;
+        }
+    
+        .bloque {
+            background-color: #1A3C34; /* Verde oscuro */
+            border-radius: 10px;
+            width: 400px;
+            height: 220px;
+            overflow: hidden;
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 10);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+    
+        .bloque:hover {
+            transform: scale(1.1);
+        }
+   
+        .bloque h3 {
+            margin: 30px;
+            font-size: 1.5rem;
+            color: #F5F5F5; /* Blanco roto */
+        }
+    
+        .bloque p {
+            padding: 15px;
+            color: #F5F5F5; /* Blanco roto */
+        }
+    
+        table {
+            width: 100%;
+            height: 100%;
+            border-spacing: 0;
+        }
+    
+        table td {
+            vertical-align: middle;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .actividad .imagen-izquierda,
+        .actividad .imagen-derecha {
+            width: 50%;
+            height: 50vh;
+        }
+    
+        .actividad .imagen-izquierda img,
+        .actividad .imagen-derecha img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .actividad .texto-derecha,
+        .actividad .texto-izquierda {
+            width: 40%;
+            padding: 30px;
+            font-size: 15px;
+            text-align: justify;
+            color: #F5F5F5; /* Blanco roto */
+        }
+    
+        footer {
+    background-color: #111111;
+   
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb800;
+}
+footer p{
+     color: #FFFFFF;
+}
+
+    
+    </style>
+    
+</head>
+<body>
+    <header class="fondo1">
+        <h1>Huelva</h1>
+    </header>
+    <nav id="general">
+        <ul>
+            <li><a href="index.html">Inicio</a>
+                <ul>
+                    <li><a href="cosastipicas.html">Cosas típicas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="propiedades.html">Propiedades externas usadas</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sevilla.html">Sevilla</a></li>
+            <li><a href="malaga.html">Málaga</a></li>
+            <li><a href="cordoba.html">Córdoba</a></li>
+            <li><a href="cadiz.html">Cádiz</a></li>
+            <li><a href="huelva.html">Huelva</a></li>
+            <li><a href="pag.html">Granada</a></li>
+            <li><a href="pag.html">Almería</a></li>
+            <li><a href="pag.html">Jaén</a></li>
+        </ul>
+    </nav>
+
+    <section class="infobloque historia">
+        <div class="texto">
+            <h2>Historia de la Feria de Huelva</h2>
+            <p>La Feria de Huelva tiene su origen en el siglo XIX, cuando la ciudad comenzó a celebrar una festividad popular que, con el paso del tiempo, se ha consolidado como una de las más importantes de la región. Esta feria, que se celebra cada año en el mes de agosto, tiene lugar en el emblemático recinto de la Avenida de las Ferias. En sus primeras ediciones, la celebración estuvo estrechamente vinculada a la festividad religiosa en honor a la Virgen de la Cinta, pero con los años, ha evolucionado hasta convertirse en un gran evento social y cultural.
+
+                Las casetas, llenas de color, música y baile, se instalan por todo el recinto y se convierten en el corazón de la fiesta. En ellas se disfruta de la gastronomía local, destacando productos como el jamón ibérico y las famosas gambas de Huelva, acompañados del refrescante rebujito. Además, la feria ofrece una gran variedad de actividades ecuestres, conciertos y desfiles, lo que convierte este evento en un escaparate de la cultura onubense. Cada año, miles de personas visitan Huelva para vivir esta fiesta repleta de alegría, tradición y sabor.</p>
+        </div>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B_7BUwNfNdc?si=RT9Ns_JzA0gaPXJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+    </section>
+    
+    <section class="infobloque elementos">
+        <h2 style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); padding-top: 45px; color: #1A3C34;">Elementos Únicos de la Feria de Huelva</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <h3>Las Gambas de Huelva</h3>
+                <p>Un plato imprescindible en la Feria de Huelva, famosas por su frescura y sabor único. Se disfrutan en cada caseta, acompañadas de un buen vino de la región.</p>
+            </div>
+            <div class="bloque">
+                <h3>El Rebujito</h3>
+                <p>La bebida refrescante por excelencia en la feria. Combinando manzanilla con soda, el rebujito es la bebida que acompaña las largas noches de fiesta.</p>
+            </div>
+            <div class="bloque">
+                <h3>Las Casetas</h3>
+                <p>Casetas de colores vibrantes que ofrecen música, baile y gastronomía. Son el alma de la feria, donde se viven momentos inolvidables con amigos y familiares.</p>
+            </div>
+        </div>
+        
+        <div class="bloques">
+            <div class="bloque">
+                <h3>Los Caballos y Carruajes</h3>
+                <p>El desfile ecuestre es uno de los momentos más esperados de la feria, con caballos engalanados y carruajes que recorren las calles, mostrando la tradición ecuestre de Huelva.</p>
+            </div>
+            <div class="bloque">
+                <h3>La Música Flamenca y las Sevillanas</h3>
+                <p>Las casetas de la feria están llenas de música flamenca y sevillanas, creando un ambiente alegre y festivo que invita al baile y la diversión.</p>
+            </div>
+            <div class="bloque">
+                <h3>La Feria Nocturna</h3>
+                <p>La Feria de Huelva cobra vida al caer la noche, con luces brillantes y actividades que se extienden hasta altas horas de la madrugada, dando lugar a un ambiente mágico.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="actividad">
+        <table>
+            <tr>
+                <td class="imagen-izquierda">
+                    <img src="imagenes/huelva/imagen-izq.jpg" alt="Imagen Izquierda">
+                </td>
+                <td class="texto-derecha">
+                    <p>La Feria de Huelva es una fiesta que combina las tradiciones andaluzas, la música flamenca y la gastronomía local. Uno de los momentos más destacados es el desfile ecuestre, donde caballos y jinetes lucen sus mejores galas ante miles de espectadores. Las casetas, que llenan el recinto ferial, son el centro de la celebración, con comida típica como el jamón ibérico y las gambas de Huelva, acompañadas de "rebujito". La música mantiene el ambiente festivo hasta altas horas de la madrugada, creando una experiencia única. Además, las casetas suelen ofrecer actividades y juegos para todos, lo que las convierte en el lugar perfecto para compartir con amigos y familiares.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="texto-izquierda">
+                    <p>Además de los desfiles, la feria ofrece concursos de sevillanas, espectáculos de flamenco y actividades para toda la familia. Las luces y colores inundan las calles, haciendo de la feria un evento vibrante que atrae a miles de personas cada año. La Feria de Huelva es sin duda uno de los eventos más esperados del verano andaluz. Cada año, se esperan grandes sorpresas y actuaciones que hacen que la feria sea aún más especial para los locales y visitantes.</p>
+                </td>
+                <td class="imagen-derecha">
+                    <img src="imagenes/huelva/imagen-der.jpg" alt="Imagen Derecha">
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+
+    <footer>
+        <p> Margarita Cantero Durán | Lenguaje de Marcas</p>
+        <a href="#">Volver arriba</a>
+    </footer>
+</body>
+</html>

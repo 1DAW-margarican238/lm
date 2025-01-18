@@ -1,0 +1,105 @@
+ 
+/* Sección Historia */
+.historia {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:#a30000;
+}
+
+
+
+.historia .imagenes {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    gap: 10px;
+    margin:10px;
+}
+.historia .texto {
+    width: 40%;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sección "Evolución" */
+.evolucion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:#121212;
+}
+
+
+
+.evolucion .imagenes {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    object-fit: contain;
+}
+
+.evolucion .imagenes img:first-child {
+    flex: 1 1 100%;
+    height: 500px;
+}
+
+.evolucion .imagenes img:not(:first-child) {
+    flex: 1 1 calc(50% - 20px);
+    height: 140px;
+}
+
+
+
+
+
+
+
+
+/* Sección "Comparación" */
+.comparacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    background-color:#a30000;
+}
+
+
+
+.comparacion .imagenes {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+}
+
+.comparacion img {
+    height: 150px;
+}
+
+.comparacion .texto-final {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
