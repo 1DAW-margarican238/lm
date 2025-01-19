@@ -190,7 +190,7 @@ footer a {
 color: #FFD700;
 text-decoration: none;
 }
-
+/*Botón transición*/
 footer a:hover {
 color: #ffb800;
 }
